@@ -1,0 +1,23 @@
+.icon{
+  width:100rpx;
+  height: 90rpx;
+}
+.tabBar{
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  bottom:0;
+  padding:10rpx;
+  background:rgb(252, 252,252);
+  font-size:20rpx;
+  height: 140rpx;
+}
+ .tabBar-item{
+  float:left;
+  width:25%;
+  text-align: center;
+  overflow: hidden;
+}
+#d1{position: absolute;left: 150rpx;top: 30rpx;}
+#d2{position: absolute;left: 36.5%;width: 234rpx; display:float;height: 247.5rpx;top: -90rpx;}
+#d3{position: absolute;right: 145rpx; top: 30rpx;}

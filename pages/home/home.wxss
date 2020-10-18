@@ -1,0 +1,16 @@
+/* pages/home/home.wxss */
+.danmu{
+  width: 100vw;
+  height: 375rpx;
+  background-color: rgb(235,235,235);
+  display: flex;
+}
+.zhuangshi{
+  width: 40.5rpx;
+  height: 40.5rpx;
+  background-color:rgb(255, 255, 255);
+  border-radius: 100%;
+}
+.d1{background-color: rgb(244, 244, 244);height: 40.5rpx;width: 390rpx;border-radius: 30rpx;position: relative;top:60rpx;}
+.bk{background-color: rgb(255, 255, 255);width: 210rpx;height: 210rpx;border-radius: 100%;text-align: center;}
+text{position: relative;top: -40.5rpx;left: 80rpx;color: rgb(151,151, 151)}

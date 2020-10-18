@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+<import src="../../template/tab.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<view>
+<view class="danmu"><view class='d1'><view class='zhuangshi'></view><text>这是一条弹幕</text></view></view>
+<view>
+<view class="bk">板块1</view>
+<view class='bk'>板块2</view>
+<view class='bk'>板块3</view></view></view>

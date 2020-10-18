@@ -1,0 +1,10 @@
+<!--pages/liuyan/liuyan.wxml-->
+<import src="../../template/tab.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<view class="tabbar">
+<view class='ta1'></view>
+<text id="b3">精彩留言</text>
+<button class='btn' id="b1" bindtap=''><text>按热度</text></button>
+<button class='btn' id="b2"><text>按时间</text></button>
+<view class='white'></view>
+</view>

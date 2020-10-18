@@ -1,0 +1,81 @@
+page{
+  background-color: rgb(247,247,247);
+}
+.userinfo-ava{
+position: absolute;
+top: 100.5rpx; 
+right: 35%;
+border-radius: 50%;}
+
+#userinfo{
+  width: 180rpx;height: 180rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  text-align: center;
+}
+.change{
+    position: absolute;
+    top: -130rpx;
+    left:17%;
+}
+.input{
+  display: flex;
+  position: relative;
+  top: -35rpx;
+  left: 170rpx;
+  font-size: 30rpx;
+}
+
+.enter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 330rpx;
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 100rpx;
+  color: white;
+  background-color: rgb(87,190,106);
+  font-weight: bolder;
+  width: 350rpx;
+  height: 80rpx;
+}
+.wx{
+  position: relative;
+  left: 110rpx;
+}
+.br{
+  position: relative;
+  left: 0rpx;
+}
+text{position: relative;left: 35rpx;top: 7.8rpx;}
+.chan{
+  position: relative;
+  top: 7.5rpx;
+  background-color: rgb(255,255,255);
+  height: 60rpx;
+  width: 100vw;
+  border: 3rpx solid rgb(247,247,247) ;
+  padding: 15rpx;
+}
+.chan1{
+  position: relative;
+  top: -7.5rpx;
+  background-color: rgb(255,255,255);
+  height: 60rpx;
+  width: 100vw;
+  border: 3rpx solid rgb(247,247,247);
+  padding: 15rpx;
+}
+#t1{
+position: relative;
+top: -5rpx;
+left: -0rpx;
+}
