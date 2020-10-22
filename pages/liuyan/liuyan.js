@@ -14,6 +14,23 @@ Page({
    */
   onLoad: function () {
     template.tabbar("tabBar", 0, this)
+    },
+    function(){
+      var _this = this
+      wx.request({
+        url: 'http://localhost:8000/data/data.json',
+        method: "GET",
+        header: {
+          "content-type": "application/json"
+        },
+        success: function (res) {
+          self.setdata({
+            proList: res.data
+          })
+          console.log(res.data)
+          console.log(res)
+        }
+    })
   },
 
   /**

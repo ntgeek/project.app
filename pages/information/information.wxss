@@ -22,9 +22,9 @@ border-radius: 50%;}
 .input{
   display: flex;
   position: relative;
-  top: -35rpx;
+  top: -40rpx;
   left: 170rpx;
-  font-size: 30rpx;
+  font-size: 32rpx;
 }
 
 .enter{
@@ -42,27 +42,27 @@ border-radius: 50%;}
   position: relative;
   top: 100rpx;
   color: white;
-  background-color: rgb(87,190,106);
+  background-color: rgb(7,193,96);
   font-weight: bolder;
-  width: 350rpx;
-  height: 80rpx;
+  width: 400rpx;
+  height: 90rpx;
 }
 .wx{
   position: relative;
   left: 110rpx;
+  font-size: 25rpx;
 }
 .br{
   position: relative;
   left: 0rpx;
 }
-text{position: relative;left: 35rpx;top: 7.8rpx;}
+.enter text{position: relative;left: 35rpx;top: 7.8rpx;font-size: 38rpx;}
 .chan{
   position: relative;
   top: 7.5rpx;
   background-color: rgb(255,255,255);
   height: 60rpx;
   width: 100vw;
-  border: 3rpx solid rgb(247,247,247) ;
   padding: 15rpx;
 }
 .chan1{
@@ -71,11 +71,13 @@ text{position: relative;left: 35rpx;top: 7.8rpx;}
   background-color: rgb(255,255,255);
   height: 60rpx;
   width: 100vw;
-  border: 3rpx solid rgb(247,247,247);
   padding: 15rpx;
 }
 #t1{
 position: relative;
-top: -5rpx;
+top: -2rpx;
 left: -0rpx;
+}
+.pickchan{
+  margin-right: 52.5rpx;
 }

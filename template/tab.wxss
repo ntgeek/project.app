@@ -10,7 +10,7 @@
   padding:10rpx;
   background:rgb(252, 252,252);
   font-size:20rpx;
-  height: 140rpx;
+  height: 120rpx;
 }
  .tabBar-item{
   float:left;
@@ -18,6 +18,6 @@
   text-align: center;
   overflow: hidden;
 }
-#d1{position: absolute;left: 150rpx;top: 30rpx;}
-#d2{position: absolute;left: 36.5%;width: 234rpx; display:float;height: 247.5rpx;top: -90rpx;}
+#d1{position: absolute;left: 120rpx;top: 30rpx;}
+#d2{position: absolute;left: 33.5%;width: 234rpx; display:float;height: 247.5rpx;top: -90rpx;}
 #d3{position: absolute;right: 145rpx; top: 30rpx;}

@@ -10,8 +10,8 @@
   left: -30rpx;
   border-color: rgb(242,242,242);
 }
-#b1{float: right;margin-left: 100rpx;}
-#b2{ float: left;margin-right: 114rpx;}
+#b1{float: right;margin-left: 107rpx;}
+#b2{ float: left;margin-right: 115rpx;}
 #b3{position:relative;top: 21rpx;left: 20rpx;font-size: 35rpx;}
 text{display: flex;justify-content: center;line-height: 45rpx;}
 .btn:hover{
