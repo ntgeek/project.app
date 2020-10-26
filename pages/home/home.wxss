@@ -4,6 +4,8 @@
   background-color: rgb(235,235,235);
   display: flex;
 }
+.map{position: relative; top: -40rpx;}
+.map1{position: relative;top: 18rpx;}
 .zhuangshi{
   width: 40.5rpx;
   height: 40.5rpx;
@@ -13,4 +15,4 @@
 .d1{background-color: rgb(244, 244, 244);height: 40.5rpx;width: 390rpx;border-radius: 30rpx;position: relative;top:60rpx;}
 .bk{background-color: rgb(255, 255, 255);width: 210rpx;height: 210rpx;border-radius: 100%;text-align: center;}
 .danmu text{position: relative;top: -40.5rpx;left: 80rpx;color: rgb(151,151, 151)}
-.t1{position: relative;left: 215rpx;color: rgb(151,151, 151);top: 60rpx;}
+.t1{position: relative;left: 215rpx;color: rgb(151,151, 151);top: 90rpx;}
