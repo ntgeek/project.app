@@ -417,7 +417,8 @@ function initChartMap(canvas, width, height,dpr) {
     },
     tooltip: {
       trigger: 'item',
-      backgroundColor: "#FFF", //文本框的背景颜色
+      visibility: "off",
+      backgroundColor: "rgb(72,72,72)", //文本框的背景颜色
       padding: [   //文本的位置
         10,  // 上
         15, // 右
@@ -427,11 +428,13 @@ function initChartMap(canvas, width, height,dpr) {
       extraCssText: 'box-shadow: 1px 1px 10px rgba(21, 126, 245, 0.35);',//文本框
       textStyle: {  ////点击后出现的文本的样式
         fontFamily: "'Microsoft YaHei', Arial, 'Avenir', Helvetica, sans-serif",
-        color: '#005dff', 
+        position:"right",
+        formatter: '{b}',
+        color: 'rgb(255,255,255)', 
         fontSize: 12,
       },
       //点击后出现的文本
-      formatter: '{b}{c}次点亮'
+
     },
     geo: [
       {
@@ -439,6 +442,10 @@ function initChartMap(canvas, width, height,dpr) {
         map: "china",
         roam: true, // 可以缩放和平移
         zoom:1.1,
+        scaleLimit: { //滚轮缩放的极限控制
+          min: 0.6,
+          max: 2
+        },
         aspectScale: 0.8, // 比例true
         layoutCenter: ["50%", "48%"], //中心的position位置
         layoutSize: 420, // 地图大小
@@ -489,10 +496,17 @@ function initChartMap(canvas, width, height,dpr) {
         mapType: 'china',
         geoIndex: 0,
         roam: false, // 鼠标是否可以缩放
+        scaleLimit: { //滚轮缩放的极限控制
+          min: 0.6,
+          max: 2
+        },
         label: {
           normal: {
             show: true
           },
+          itemStyle: {
+            color: '#ddb926'
+        },
           emphasis: {
             show: true
           }
@@ -503,7 +517,7 @@ function initChartMap(canvas, width, height,dpr) {
         large: true,
         text:false,
         symbolSize: function (val) {
-          return val[2] / 15;
+          return val[2] / 20;
       },
         data:convertData(data),
         label: {
@@ -513,13 +527,49 @@ function initChartMap(canvas, width, height,dpr) {
       },
       itemStyle: {
         color: '#f4e925',
-      
-    }, name: 'Top 5',
-    
-}
+    }
+},{
+  name: 'Top 5',
+            type: 'effectScatter',
+            coordinateSystem: 'geo',
+            data: convertData(data.sort(function (a, b) {
+                return b.value - a.value;
+            }).slice(0, 6)),
+            encode: {
+                value: 2
+            },
+            symbolSize: function (val) {
+                return val[2] / 10;
+            },
+            showEffectOn: 'emphasis',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
+            hoverAnimation: true,
+            label: {
+                formatter: '{b}',
+                position: 'right',
+                show: true
+            },
+            itemStyle: {
+                color: '#f4e925',
+                shadowBlur: 10,
+                shadowColor: '#333'
+            }
+          },
+          {
+            type: 'custom',
+            coordinateSystem: 'geo',
+            itemStyle: {
+                opacity: 0.5
+            },
+            animation: false,
+            silent: true,
+            data: [0],
+            z: -10
+        }
 ]
 }; 
- 
   myMap.setOption(option);
   return myMap
 }
