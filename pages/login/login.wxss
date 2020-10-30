@@ -1,6 +1,10 @@
 page{
     background-color: rgb(247,247,247);
   }
+  .w{
+    width: 100vw;
+    height: 100vh;
+  }
   .userinfo-ava{
   position: absolute;
   top: 100.5rpx; 

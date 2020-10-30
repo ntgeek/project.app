@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/home/home",
-     "pages/login/login",
+    "pages/login/login",
     "pages/information/information",
+    "pages/home/home",
     "pages/liuyan/liuyan"
   ],
   "window": {
