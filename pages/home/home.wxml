@@ -1,9 +1,11 @@
-<import src="../../template/tab.wxml"/>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
-<view>
+<view class="all">
+<tabbar activeIdx="{{activeIdx}}"></tabbar>
 <view class="danmu"><view class='d1'><view class='zhuangshi'></view><text>这是一条弹幕</text></view></view>
-<view class="map">
+<view class="map" >
  <text class="t1">民大应援,点亮中国</text> 
-<ec-canvas id="mychart-dom-map" canvas-id="mychart" ec="{{ ecMap }}" class="map1"></ec-canvas>
+ <view> 
+<ec-canvas id="mychart-dom-map" canvas-id="mychart" ec="{{ ecMap }}" class="map1" ></ec-canvas>
+<image src="../../images/star.png" style="width:85rpx;height:92rpx;" class="img" bindtap="f1"></image>
+</view>
 </view>
 </view>

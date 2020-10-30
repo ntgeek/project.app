@@ -1,12 +1,11 @@
 const app = getApp()
-var template = require('../../template/tab.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    activeIdx:0
   },
 
   /**

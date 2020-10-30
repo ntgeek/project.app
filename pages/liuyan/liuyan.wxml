@@ -1,7 +1,7 @@
 <!--pages/liuyan/liuyan.wxml-->
 <import src="../../template/tab.wxml"/>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
-<view class="tabbar">
+<tabbar activeIdx="{{activeIdx}}"></tabbar>
+<view class="tabbar1">
 <view class='ta1'></view>
 <text id="b3">精彩留言</text>
 <button class='btn' id="b1" bindtap=''><text>按热度</text></button>

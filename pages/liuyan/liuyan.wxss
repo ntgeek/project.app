@@ -10,16 +10,16 @@
   left: -30rpx;
   border-color: rgb(242,242,242);
 }
-#b1{float: right;margin-left: 107rpx;}
-#b2{ float: left;margin-right: 115rpx;}
-#b3{position:relative;top: 21rpx;left: 20rpx;font-size: 35rpx;}
+#b1{position: absolute;top:25rpx;left: 26.5%;}
+#b2{ float: left;margin-right: 123rpx;}
+#b3{position:relative;top: 21rpx;left: 15px;font-size: 35rpx;width: auto;}
 text{display: flex;justify-content: center;line-height: 45rpx;}
 .btn:hover{
   background-color: rgb(26, 188,156); 
   color: rgb(247, 247,247);
    border-radius: 0%;
 }
-.tabbar{
+.tabbar1{
   display: flex;
   background-color: rgb(247, 247,247);
   width: 100vw;

@@ -1,8 +1,9 @@
 
 
 App({
-  onLoad: function (options) {
-    wx.hideTabBar();
+  onLaunch: function() {
+    // 隐藏原生的tabbar
+    wx.hideTabBar()
   },
   onLaunch: function () {
     // 展示本地存储能力
@@ -41,3 +42,4 @@ App({
     userInfo: null
   }
 })
+ // 隐藏原生的tabbar

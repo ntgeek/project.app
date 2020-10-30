@@ -1,6 +1,5 @@
 <!--pages/information/information.wxml-->
-<import src="../../template/tab.wxml"/>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<tabbar activeIdx="{{activeIdx}}"></tabbar>
 <view class="content">
 <view class="nav">
   <view class="userinfo-ava">
@@ -9,9 +8,9 @@
 <view class="enter">
 <view class="chan1" id="ct1"><text>姓名</text><input class="input" name="user" placeholder="输入姓名" /></view>
 <view class="chan1" ><text>学号</text><input class="input" placeholder="输入学号" /></view>
-<view class="chan"><picker bindchange="bindPickerChange1" value="{{index}}" range="{{array1}}" class="br" ><text class="pickchan">学院</text><text class="wx">{{array1[index]}}</text></picker><view class="wx1">{{array1.index}}</view></view>
-<view class="chan" id="ct2"><picker bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}" class="br"><text class='pickchan'>地区</text><text class="wx">{{array2[index1]}}</text></picker><view class='wx1'>{{array2.index2}}</view></view>
-<button class="btn"><text id='t1'>确定</text></button>
+<view class="chan"><picker bindchange="bindPickerChange1" value="{{index}}" range="{{array1}}" class="br" ><text class="pickchan">学院</text><text class="wx">{{array1[index]}}</text></picker><view class="wx1">计算机科学学院
+</view></view>
+<view class="chan" id="ct2"><picker bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}" class="br"><text class='pickchan'>地区</text><text class="wx">{{array1.index}}</text></picker><view class='wx1'>{{array2.index2}}</view></view>
 </view>
 </view>
 </view>

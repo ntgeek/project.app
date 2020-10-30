@@ -1,9 +1,8 @@
 {
-  "pages": [ 
+  "pages": [ "pages/login/login",
     "pages/home/home",
     "pages/information/information",
-    "pages/liuyan/liuyan",
-    "pages/login/login"
+    "pages/liuyan/liuyan"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,5 +10,32 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
-}
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/liuyan/liuyan",
+        "text": "首页",
+        "iconPath": "/images/talk.png",
+        "selectedIconPath": "/images/talk1.png",
+        "auth": 0
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "发现",
+        "iconPath": "/images/light.png",
+        "selectedIconPath": "/images/light.png",
+        "auth": 0
+      },
+      {
+        "pagePath": "pages/information/information",
+        "text": "项目对接",
+        "iconPath": "/images/people.png",
+        "selectedIconPath": "/images/people1.jpg",
+        "auth": 0
+      }]
+  }
+    
+  }
+
