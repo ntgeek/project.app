@@ -1,10 +1,88 @@
+page{
+  background-color: rgb(247,247,247);
+}
+.w{
+  width: 100vw;
+  height: 100vh;
+}.wx1{
+  position: relative;
+  left: 22vw;
+  top: -35rpx;
+}
+.userinfo-ava{
+position: absolute;
+top: 100.5rpx; 
+right: 35%;
+border-radius: 50%;}
+
 #userinfo{
-  width: 28vw;height: 28vw;
+  width: 180rpx;height: 180rpx;
   border-radius:50%;
   display: flex;
   overflow:hidden;
   text-align: center;
-  position: absolute;
-  left: 36vw;
-  top:8vh;
 }
+.change{
+    position: absolute;
+    top: -130rpx;
+    left:17%;
+}
+.input{
+  display: flex;
+  position: relative;
+  top: -40rpx;
+  left: 170rpx;
+  font-size: 32rpx;
+}
+
+.enter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 330rpx;
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 100rpx;
+  color: white;
+  background-color: rgb(7,193,96);
+  font-weight: bolder;
+  width: 400rpx;
+  height: 90rpx;
+}
+
+.br{
+  position: relative;
+  left: 0rpx;
+}
+.enter text{position: relative;left: 35rpx;top: 7.8rpx;font-size: 38rpx;}
+.chan{
+  position: relative;
+  top: 7.5rpx;
+  background-color: rgb(255,255,255);
+  height: 60rpx;
+  width: 100vw;
+  padding: 15rpx;
+}
+.chan1{
+  position: relative;
+  top: -7.5rpx;
+  background-color: rgb(255,255,255);
+  height: 60rpx;
+  width: 100vw;
+  padding: 15rpx;
+}
+#t1{
+position: relative;
+top: -2rpx;
+left: -0rpx;
+}
+.pickchan{
+  margin-right: 52.5rpx;
+}
+.tui-picker-detail{position: relative;top: -39rpx;left: 22vw;}

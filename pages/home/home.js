@@ -1,6 +1,7 @@
 const app = getApp()
 import * as echarts from '../../ec-canvas/echarts'; //导入组件
 import geoJson from './mapData.js';  //导入中国地图信息
+var change=1;
 var data=[{name: '海门', value: 9},
 {name: '鄂尔多斯', value: 12},
 {name: '招远', value: 12},
@@ -517,7 +518,10 @@ function initChartMap(canvas, width, height,dpr) {
         large: true,
         text:false,
         symbolSize: function (val) {
+          if(val[2]<1000)
           return val[2] / 20;
+          else
+          return  50
       },
         data:convertData(data),
         label: {
@@ -539,7 +543,10 @@ function initChartMap(canvas, width, height,dpr) {
                 value: 2
             },
             symbolSize: function (val) {
-                return val[2] / 10;
+              if(val[2]<500)
+                return val[2] / 15;
+              else
+                return 34  
             },
             showEffectOn: 'emphasis',
             rippleEffect: {
@@ -573,48 +580,87 @@ function initChartMap(canvas, width, height,dpr) {
   myMap.setOption(option);
   return myMap
 }
+var xx="2"
 Page({
-  
-
-  /**
-   * 页面的初始数据
-   */
-  f1:function(data){   
-    if(data!=0){
-    wx.showModal({
-    title: 'toptip',
-    content: '请先填写地址信息',
-    success:function(res){
-        if(res.confirm){
-          wx.switchTab({
-            url: "/pages/information/information",
-          })
-           console.log('弹框后点取消')
-        }else{
-           console.log('弹框后点取消')
-        }
-    }
- })}
-if(data==0){
-    wx.showToast({  
-        title:"成功为民大点亮星星",  
-        icon: 'success',  
-        duration: 2000,
-        mask:true,
-    })  
-}},
   data: {
     ecMap:{
       onInit:initChartMap
     },
-    activeIdx:1
+    activeIdx:1,
+    ishide:false,
+    data:true,
+    change:1,
+    gurl:"../../images/xingxing.gif"
   },
-
+ 
   /**
-   * 生命周期函数--监听页面加载
+   * 页面的初始数据
    */
+  f1:function(){   
+    var that=this;
+   switch(app.change) {
+     case 1:{
+      wx.showModal({
+        title: '民大应援,点亮中国',
+        content: '请先填写信息',
+        success:function(res){
+            if(res.confirm){
+              wx.switchTab({
+                url: "/pages/information/information",
+              }),
+               console.log('弹框后点取消')
+            }
+            else{
+               console.log('弹框后点取消')
+            }}})
+        break;
+          }
+      case 2:{
+        that.setData({ishide:true})
+        wx.request({
+          url: 'https://api.pomelo072.top/',
+          success:   wx.showToast({  
+            title:"成功为民大点亮星星",  
+            icon: 'success',  
+            duration: 2000,
+            mask:true,
+            success:function(res){
+            app.change=3;
+            }, 
+        })
+        })
+      break;
+    }
+      case 3:{
+        wx.showModal({
+          title: '民大应援,点亮中国',
+          content: '您已经为民大应援过了！',
+          success:function(res){
+              if(res.confirm){
+                 console.log('弹框后点取消')
+              }
+              else{
+                 console.log('弹框后点取消')
+              }}})
+           
+      }}},
+
+      gifImgLoad(e) {
+        var gifurl = this.data.gifUrl;
+        var nowTime = +new Date();
+        setTimeout(() => {
+          this.setData({
+            gifUrl: gifurl + '?' + nowTime,
+            ishide:false
+        })
+      }, 1000)},
+    
+ 
   onLoad: function (options) {
     template.tabbar("tabBar", 0, this)
+  },
+  doSomething(){
+    app.$$data.change="change";
   },
 
   /**

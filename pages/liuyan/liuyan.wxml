@@ -1,9 +1,25 @@
-<!--pages/liuyan/liuyan.wxml-->
-<import src="../../template/tab.wxml"/>
-<tabbar activeIdx="{{activeIdx}}"></tabbar>
+<!--pages/liuyan/liuyan.wxml--><view class='ta1'>
+  <text>民大应援,点亮地图</text>
+  <image src="../../images/home.png" style="height:7vw;width:7vw;top:-1vh;position:relative;left:2vw" bindtap="goback"></image>
+</view>
 <view class="tabbar1">
-<view class='ta1'></view>
 <text id="b3">精彩留言</text>
-<button class='btn' id="b1" bindtap=''><text>按热度</text></button>
-<button class='btn' id="b2"><text>按时间</text></button>
+<button class='btn' id="b1" bindtap='f1' checked="checked" type="radio" style="background-color:{{current==index?'rgb(26, 188,156)':'rgb(247,247,247)'}};color:{{current==index?'rgb(255,255,255)':'rgb(41,41,41)'}}"><text>按热度</text></button>
+<button class='btn' id="b2" bindtap="f2" type="radio"><text>按时间</text></button>
+<scroll-view style="height:80vh;position:relative;top:8vw;" scroll-y="false">
+<view class="content">
+<block wx:for="{{current==index?list:list1}}" style="display:flex" class="liuinf">
+  <view class="all1">
+<view class="ver">{{item.replymsg}}</view>
+<view class="username">{{item.replyname}}</view>
+<image src="{{imgurl}}" style="height:7.6vw;width:7.6vw" class="likeimg" bindtap="f5"></image>
+<view class="liken">{{item.replywell}}</view>
+</view>
+</block>
+</view>
+</scroll-view>
+<view class="comment" style="buttom:{{buttom}}px">
+<input value="{{comments}}" type="text" maxlength="50" class="commentsinput" placeholder="请输入评论内容（500字以内）" bindblur="cm1" bindfocus='onbindfocus'></input>
+<text class="com" bindblur="cm1">评论</text>
+</view>
 </view>

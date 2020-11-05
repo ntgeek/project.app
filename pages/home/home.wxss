@@ -12,9 +12,13 @@
   background-color:rgb(255, 255, 255);
   border-radius: 100%;
 }
+.ta1 text{display: flex;align-items: center;text-align: center;position: relative;top: 3vh;}
+.ta1{width: 100vw;height: 10vh;position: fixed;top:3vh;}
 .d1{background-color: rgb(244, 244, 244);height: 40.5rpx;width: 390rpx;border-radius: 30rpx;position: relative;top:60rpx;}
 .bk{background-color: rgb(255, 255, 255);width: 210rpx;height: 210rpx;border-radius: 100%;text-align: center;}
 .danmu text{position: relative;top: -40.5rpx;left: 80rpx;color: rgb(151,151, 151)}
 .all{width: 100vw;height: 100vh;}
 .t1{position: relative;left: 35%;color: rgb(151,151, 151);top: 14vh;}
-.img{position: fixed;top:89.5vh;left: 45.5vw;}
+.img1{position: fixed;top:89.5vh;left: 45.5vw;z-index:901;}
+.img{position: fixed;top:91.8vh;left: 47vw;z-index: 901;}
+#gif{position: relative;top:-3vh;left: 42vw;}

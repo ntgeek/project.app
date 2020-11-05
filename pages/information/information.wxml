@@ -1,8 +1,22 @@
 <!--pages/information/information.wxml-->
 <tabbar activeIdx="{{activeIdx}}"></tabbar>
-<view class="content">
- <view class="userinfo"> 
+
+<view class="content" >
+<view class="nav">
+  <view class="userinfo-ava">
 <open-data type="userAvatarUrl" id="userinfo"></open-data>
-<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view class="enter">
+<view class="chan1" id="ct1"><text>姓名</text><input class="input" name="user" placeholder="输入姓名" value="{{userName}}" bindblur="storage"/></view>
+<view class="chan1" ><text>学号</text><input class="input" placeholder="输入学号" value="{{userNumbel}}" bindblur="uNumber"/></view>
+<view class="chan"><picker  value="{{index}}" range="{{array1}}" class="br" bindchange="try"><text class="pickchan">学院</text><view class="wx1">{{array1[index]}}</view></picker></view>
+<view class="tui-picker-content" class="chan" >
+  <view class="tui-picker-name"><text class="pickchan">地区</text></view>
+  <picker bindchange="changeRegin" mode = "region" value="{{region}}" class="">
+    <view class="tui-picker-detail">{{region[0]}}  {{region[1]}}-{{region[2]}}</view>
+  </picker>
+</view>
+<button class="btn" bindtap="f1" ><text id='t1'>确定</text></button>
+</view>
 </view>
 </view>

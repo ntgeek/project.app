@@ -1,14 +1,13 @@
 {
   "pages": [
-    "pages/login/login",
+    "pages/liuyan/liuyan",
     "pages/information/information",
-    "pages/home/home",
-    "pages/liuyan/liuyan"
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#F7F7F7",
+    "navigationBarTitleText": "民大助力,点亮全国",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

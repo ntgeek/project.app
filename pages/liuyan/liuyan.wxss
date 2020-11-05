@@ -1,6 +1,18 @@
-/* pages/liuyan/liuyan.wxss */
+page{
+  background-color: rgb(247,247,247);
+}
+.w{
+  width: 100vw;
+  height: 100vh;
+}
+.userinfo-ava{
+position: absolute;
+top: 100.5rpx; 
+right: 35%;
+border-radius: 50%;}
+
 .btn{
-  width: 201rpx;
+  width: 27vw;
   height: 45rpx;
   font-size: 25rpx;
   background-color: rgb(247, 247,247);
@@ -11,17 +23,47 @@
   border-color: rgb(242,242,242);
 }
 #b1{position: absolute;top:25rpx;left: 26.5%;}
-#b2{ float: left;margin-right: 123rpx;}
-#b3{position:relative;top: 21rpx;left: 15px;font-size: 35rpx;width: auto;}
+#b2{ position:absolute;top:25rpx;left: 53.7vw;}
+#b2:hover{  background-color: rgb(26, 188,156); 
+  color: rgb(247, 247,247);}
+#b3{position: absolute;top:25rpx;left:3vw;}
 text{display: flex;justify-content: center;line-height: 45rpx;}
 .btn:hover{
-  background-color: rgb(26, 188,156); 
-  color: rgb(247, 247,247);
    border-radius: 0%;
 }
 .tabbar1{
   display: flex;
-  background-color: rgb(247, 247,247);
+  background-color: rgb(245, 245,245);
   width: 100vw;
   height: 80rpx;
 }
+.content{
+  width: 100vw;
+  display: flex;
+ flex-direction: column;
+}
+.all1{
+  position: relative;
+  top:4vh;
+  padding:0rpx;
+  width: 100vw;
+  height: 14vh;
+  border-bottom: 3rpx solid rgb(255, 255,255);
+}
+
+.commentsinput{background: rgb(236,239,240);height: 10vh;width: 85vw;border-radius: 3vw;}
+.ver{display: flex;align-items:center;justify-content: center;position: relative;top: 8vh;left: -20vw;color: rgb(189,189,189);}
+.comment{display: flex;align-items:center;justify-content: center;position:fixed;left: -20vw;color: rgb(189,189,189);}
+.username{
+  color: rgb(100,100,100);
+  position: relative;
+  left: 10vw;
+}
+.ta1 text{display: flex;align-items: center;text-align: center;position: relative;top: 3vh;}
+.tabbar1{position: fixed;top:10vh;}
+.ta1{width: 100vw;height: 10vh;position: fixed;top:3vh;}
+.com{width: 14vw;height:10vh;border: solid 3rpx rgb(26, 188,156); display: flex; align-items: center; justify-content: center;color: rgb(100,100,100);background-color: rgb(26, 188,156);}
+.comment{position: fixed;width:100vw;height: 6vh;left: 0vw;-webkit-overflow-scrolling: touch;display: -webkit-flex;overflow-y: scroll;bottom:0px}
+.comment1{height: 8vh;}
+.likeimg{position: relative;left:80vw;top:-2.2vh}
+.liken{position: relative;left: 88vw;top: -6.5vh;}

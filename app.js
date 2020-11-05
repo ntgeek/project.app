@@ -5,6 +5,10 @@ App({
     // 隐藏原生的tabbar
     wx.hideTabBar()
   },
+  change:1,
+  username:"",
+  USERID:"",
+  area:"",
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
