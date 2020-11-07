@@ -68,3 +68,4 @@ text{display: flex;justify-content: center;line-height: 45rpx;}
 .comment1{height: 8vh;}
 .likeimg{position: absolute;left:80vw;top:3vh;}
 .liken{position: absolute;left: 88vw;top:3.3vh;}
+.time{position: absolute;top:11vh;left: 77vw;font-size: 14rpx;}

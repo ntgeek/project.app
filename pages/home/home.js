@@ -582,15 +582,17 @@ function initChartMap(canvas, width, height,dpr) {
 var xx="2"
 Page({
   data: {
+    is:true,
     ecMap:{
       onInit:initChartMap
     },
     activeIdx:1,
     ishide:false,
+    cange:false,
     data:true,
     change:1,
     gurl:"../../images/xingxing.gif",
-    iurl:"../../images/star.pn"
+    iurl:"../../images/star.png"
   },
  
   /**
@@ -616,7 +618,7 @@ Page({
         break;
           }
       case 2:{
-        that.setData({ishide:true})
+        that.setData({ishide:true,is:false})
         wx.request({
           url: 'https://api.pomelo072.top/stars/light',
           data:{
@@ -655,13 +657,11 @@ Page({
         setTimeout(() => {
           this.setData({
             gifUrl: gifurl + '?' + nowTime,
-            ishide:false
+            ishide:false,
+            cange:true
         })
-      }, 2000
+      }, 800,
       )
-      this.setData({
-         
-      })
     },
     
  

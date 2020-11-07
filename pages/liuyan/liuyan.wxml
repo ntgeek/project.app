@@ -8,13 +8,13 @@
 <button class='btn' id="b2" bindtap="f2" type="radio"><text>按时间</text></button>
 <scroll-view style="height:80vh;position:relative;top:8vw;" scroll-y="false">
 <view class="content">
-<block wx:for="{{current==index?list:list1}}" style="display:flex" class="liuinf">
+<block wx:for="{{current==index?list:list1}}" style="display:flex" class="liuinf" wx:key="index">
   <view class="all1">
 <view class="ver">{{item.replymsg}}</view>
-<view class="username">{{item.replyname}}</view>
-<image src="{{imgurl}}" style="height:7.6vw;width:7.6vw;" class="likeimg" bindtap="f5"></image>
-<view class="liken">{{item.replywell}}</view>
-<view>{{item.replytime}}</view>
+<view class="username" >{{item.replyname}}</view>
+<image src="{{imgurl[index]}}" style="height:7.6vw;width:7.6vw;" class="likeimg" bindtap="f5" data-id="{{index}}" value="{{l[index]}}"></image>
+<view class="liken" >{{item.replywell}}</view>
+<view class="time">{{item.replytime}}</view>
 </view>
 </block>
 </view>

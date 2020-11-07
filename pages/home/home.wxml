@@ -5,9 +5,9 @@
  <text class="t1">民大应援,点亮中国</text> 
  <view> 
 <ec-canvas id="mychart-dom-map" canvas-id="mychart" ec="{{ ecMap }}" class="map1" ></ec-canvas>
-<image src="{{iurl}}" style="width:85rpx;height:92rpx;" class="img1" bindtap="f1" value="{{change}}"></image>
-<image src="{{gurl}}" style="width:14vh;height:14vh;" class="img" id="gif" bindload="gifImgLoad" wx:if="{{ishide}}"></image>
-<image src="../../images/lighted.jpg" class="img2"  wx:if="{{ishide}}"></image>
+<image src="{{iurl}}" style="width:85rpx;height:92rpx;" class="img1" bindtap="f1" value="{{change}}" wx:if="{{is}}"></image>
+<image src="{{gurl}}" style="width:14vh;height:14.3vh;" class="img" id="gif" bindload="gifImgLoad" wx:if="{{ishide}}"></image>
+<image src="../../images/lighted.jpg" class="img2"  wx:if="{{cange}}"></image>
 </view>
 </view>
 </view>

@@ -9,9 +9,16 @@ Page({
     like:123,
     door:0,
     current:0,
-    imgurl:"../../images/like1.png",
+    imgurl:[],
+    imgurl1:[],
     index:0,
-    pinglun:""
+    pinglun:"",
+    arr:[],
+    arr1:[],
+    url:"../../images/like1.png",
+    url1:"../../images/like.png",
+    l:[],
+    l1:[]
   },
 
   /**
@@ -81,11 +88,20 @@ Page({
       USERID:app.USERID,
       REPLYNAME:app.username,
     })
+    for(var i=0;i<that.data.list1.length;i++){
+      that.setData({
+        'arr1':that.data.arr1.concat(that.data.list1[i].msg_id),
+        'imgurl1':that.data.imgurl1.concat(that.data.url),
+        'l1':that.data.l1.concat(0),
+    })}
+    for(var i=0;i<that.data.list.length;i++){
+      that.setData({
+        'arr':that.data.arr.concat(that.data.list[i].msg_id),
+        'imgurl':that.data.imgurl.concat(that.data.url),
+        'l':that.data.l.concat(0),
+    })}
+    
   }})
-  this.setData({
-    msgid1:that.data.list1.msg_id,
-    msgid:that.data.list.msg_id
-  })
 },
 
   /**
@@ -213,31 +229,48 @@ this.setData({current:1})
   onShareAppMessage: function () {
 
   },
-  f5(){
+  f5(e){
+    var id =e.currentTarget.dataset.id;
     var that=this;
+    let arr=that.data.arr;
+    let a=that.data.current;
     if(app.USERID==""){
     wx.showModal({
       title:"民大应援,点亮地图",
       content:"请先填写信息"
     })}
     else{
-    if(this.data.door==0){
+    if(this.data.l[id]=="0" || this.data.l1[id]=="0"){
     this.setData({
-        door:1,
-        imgurl:"../../images/like.png"
+      [`l[${id}]`]:1,
+      [`l1[${id}]`]:1,
     })
+    if(a==0){
     wx.request({
       url: 'https://api.pomelo072.top/msg/well',
       data:{
-        type:"time",
-        pages:"1",
-        pagesize:"20"
+        msg_id:that.data.arr[id],
+        username:app.username
       },
       success:function(res){
     that.setData({
-      list1:res.data.Data
+      [`imgurl[${id}]`]:'../../images/like.png',
+      [`list[${id}].replywell`]:that.data.list[id].replywell+1
     })
   }})}
+  else{wx.request({
+    url: 'https://api.pomelo072.top/msg/well',
+    data:{
+      msg_id:res.data.arr1[id],
+      username:app.username
+    },
+    success:function(res){
+  that.setData({
+    [`imgurl1[${id}]`]:'../../images/like.png',
+    [`list1[${id}].replywell`]:that.data.list1[id].replywell+1
+  })
+}})}
+}
     else{
       wx.showToast({
         title: "您已经点赞过了!",
