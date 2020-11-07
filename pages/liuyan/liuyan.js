@@ -23,7 +23,7 @@ Page({
     function(){
       var _this = this
       wx.request({
-        url: 'https://api.pomelo072.top/8086/msg/add',
+        url: 'https://api.pomelo072.top/msg/add',
         method: "POST",
         header: {
           "content-type": "application/json"
@@ -78,9 +78,14 @@ Page({
       success:function(res){
     that.setData({
       list1:res.data.Data,
+      USERID:app.USERID,
+      REPLYNAME:app.username,
     })
-  
   }})
+  this.setData({
+    msgid1:that.data.list1.msg_id,
+    msgid:that.data.list.msg_id
+  })
 },
 
   /**
@@ -109,7 +114,11 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
+  
   cm1(e){
+    this.setData({
+      comment:e.detail.value
+    })
     var that=this;
   if(app.USERID==""){
       wx.showModal({
@@ -133,13 +142,14 @@ Page({
    title:"民大应援,点亮地图",
    content:"评论不得为空",
   })}
-   else{wx.request({
+   else{
+     wx.request({
     url: 'https://api.pomelo072.top/msg/add',
     method:"POST",
     data: {
-      REPLYNAME:app.username,
-      USERID:app.USERID,
-      REPLYMSG:that.data.comment
+      REPLYNAME:that.data.REPLYNAME,
+      USERID:that.data.USERID,
+      REPLYMSG:e.detail.value
     },
     success:function(res){
       wx.showModal({
@@ -167,13 +177,12 @@ Page({
         },
         success:function(res){
       that.setData({
-        list1:res.data.Data,
-        comment:""
+        list1:res.data.Data
       })
     
     }})
   that.setData({
-    list:res.data.Data
+    list:res.data.Data,
   })
 
 }})
@@ -206,16 +215,32 @@ this.setData({current:1})
   },
   f5(){
     var that=this;
-    
+    if(app.USERID==""){
+    wx.showModal({
+      title:"民大应援,点亮地图",
+      content:"请先填写信息"
+    })}
+    else{
     if(this.data.door==0){
     this.setData({
         door:1,
         imgurl:"../../images/like.png"
-    })}
+    })
+    wx.request({
+      url: 'https://api.pomelo072.top/msg/well',
+      data:{
+        type:"time",
+        pages:"1",
+        pagesize:"20"
+      },
+      success:function(res){
+    that.setData({
+      list1:res.data.Data
+    })
+  }})}
     else{
       wx.showToast({
         title: "您已经点赞过了!",
       })
-    }
-  }
+  }}}
 })

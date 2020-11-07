@@ -12,8 +12,9 @@
   <view class="all1">
 <view class="ver">{{item.replymsg}}</view>
 <view class="username">{{item.replyname}}</view>
-<image src="{{imgurl}}" style="height:7.6vw;width:7.6vw" class="likeimg" bindtap="f5"></image>
+<image src="{{imgurl}}" style="height:7.6vw;width:7.6vw;" class="likeimg" bindtap="f5"></image>
 <view class="liken">{{item.replywell}}</view>
+<view>{{item.replytime}}</view>
 </view>
 </block>
 </view>

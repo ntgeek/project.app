@@ -1,6 +1,7 @@
 const app = getApp()
 import * as echarts from '../../ec-canvas/echarts'; //导入组件
 import geoJson from './mapData.js';  //导入中国地图信息
+import WxCanvas from '../../ec-canvas/wx-canvas';
 var change=1;
 var data=[{name: '海门', value: 9},
 {name: '鄂尔多斯', value: 12},
@@ -192,7 +193,8 @@ var data=[{name: '海门', value: 9},
 {name: '合肥', value: 229},
 {name: '武汉', value: 273},
 {name: '大庆', value: 279}];
-var geoCoordMap = {  '海门':[121.15,31.89],
+var geoCoordMap = {  
+'海门':[121.15,31.89],
 '鄂尔多斯':[109.781327,39.608266],
 '招远':[120.38,37.35],
 '舟山':[122.207216,29.985295],
@@ -383,10 +385,7 @@ var geoCoordMap = {  '海门':[121.15,31.89],
 '武汉':[114.31,30.52],
 '大庆':[125.03,46.58]   //绘制gps坐标，作用于散点图
 };
-var max = 607,
-    min = 0; // todo 
-var maxSize4Pin = 50,
-    minSize4Pin = 0;
+
 var convertData = function(data) { //将坐标取到数组里
   var res = [];
   for (var i = 0; i < data.length; i++) {
@@ -590,7 +589,8 @@ Page({
     ishide:false,
     data:true,
     change:1,
-    gurl:"../../images/xingxing.gif"
+    gurl:"../../images/xingxing.gif",
+    iurl:"../../images/star.pn"
   },
  
   /**
@@ -618,9 +618,13 @@ Page({
       case 2:{
         that.setData({ishide:true})
         wx.request({
-          url: 'https://api.pomelo072.top/',
-          success:   wx.showToast({  
-            title:"成功为民大点亮星星",  
+          url: 'https://api.pomelo072.top/stars/light',
+          data:{
+            user_id:that.data.id,
+            address:that.data.area
+          },
+          success:wx.showToast({  
+            title:"成功为民大点亮星星", 
             icon: 'success',  
             duration: 2000,
             mask:true,
@@ -653,7 +657,12 @@ Page({
             gifUrl: gifurl + '?' + nowTime,
             ishide:false
         })
-      }, 1000)},
+      }, 2000
+      )
+      this.setData({
+         
+      })
+    },
     
  
   onLoad: function (options) {
@@ -661,6 +670,7 @@ Page({
   },
   doSomething(){
     app.$$data.change="change";
+    app.$$data.area="area"
   },
 
   /**
@@ -674,7 +684,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.request({
+      url: 'https://api.pomelo072.top/stars/list',
+      success:function(res){
+        data:res.Data
+      }
+  })
   },
 
   /**

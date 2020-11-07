@@ -11,7 +11,6 @@ Page({
     change:2,
     usernumber:"",
     college:"",
-    area:"",
     region: "",
     userName:""
   },
@@ -22,7 +21,6 @@ try:function(e){
   })
 },
 storage:function(e){
-
 this.setData({
   userName:e.detail.value
 })

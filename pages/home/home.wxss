@@ -20,5 +20,6 @@
 .all{width: 100vw;height: 100vh;}
 .t1{position: relative;left: 35%;color: rgb(151,151, 151);top: 14vh;}
 .img1{position: fixed;top:89.5vh;left: 45.5vw;z-index:901;}
-.img{position: fixed;top:91.8vh;left: 47vw;z-index: 901;}
-#gif{position: relative;top:-3vh;left: 42vw;}
+.img{position: fixed;left: 47vw;z-index: 901;}
+.img2{position: fixed;top:89.5vh;left: 45.5vw;z-index:901;width: 15vw;height: 15vw;}
+#gif{position: relative;top:-11vh;left: 40vw;}

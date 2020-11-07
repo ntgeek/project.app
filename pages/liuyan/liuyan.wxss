@@ -52,12 +52,13 @@ text{display: flex;justify-content: center;line-height: 45rpx;}
 }
 
 .commentsinput{background: rgb(236,239,240);height: 10vh;width: 85vw;border-radius: 3vw;}
-.ver{display: flex;align-items:center;justify-content: center;position: relative;top: 8vh;left: -20vw;color: rgb(189,189,189);}
+.ver{display: flex;align-items:center;justify-content: center;position: absolute;top: 7.8vh;left: 15vw;color: rgb(189,189,189);}
 .comment{display: flex;align-items:center;justify-content: center;position:fixed;left: -20vw;color: rgb(189,189,189);}
 .username{
   color: rgb(100,100,100);
-  position: relative;
+  position: absolute;
   left: 10vw;
+  top:3.2vh;
 }
 .ta1 text{display: flex;align-items: center;text-align: center;position: relative;top: 3vh;}
 .tabbar1{position: fixed;top:10vh;}
@@ -65,5 +66,5 @@ text{display: flex;justify-content: center;line-height: 45rpx;}
 .com{width: 14vw;height:10vh;border: solid 3rpx rgb(26, 188,156); display: flex; align-items: center; justify-content: center;color: rgb(100,100,100);background-color: rgb(26, 188,156);}
 .comment{position: fixed;width:100vw;height: 6vh;left: 0vw;-webkit-overflow-scrolling: touch;display: -webkit-flex;overflow-y: scroll;bottom:0px}
 .comment1{height: 8vh;}
-.likeimg{position: relative;left:80vw;top:-2.2vh}
-.liken{position: relative;left: 88vw;top: -6.5vh;}
+.likeimg{position: absolute;left:80vw;top:3vh;}
+.liken{position: absolute;left: 88vw;top:3.3vh;}
