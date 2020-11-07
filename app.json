@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/liuyan/liuyan",
     "pages/information/information",
+    "pages/liuyan/liuyan",
     "pages/home/home"
   ],
   "window": {
